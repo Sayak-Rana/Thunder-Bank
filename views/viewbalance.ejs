@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="style.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <%- include('nav') -%>
+    <div class="login-box">
+        <h2>Send Money</h2>
+        <form method="POST">
+          <div class="user-box">
+            <input type="text" id="Sender" name="sec">
+            <label>Enter Account No</label>
+          </div>
+          <button type="submit">View Balance</button>
+        </form>
+      </div>
+     
+    <!-- <div class="login-box">
+    <h2>Login</h2>
+    <form method="POST">
+        <label for="Sender">Sender:</label><br>
+        <input type="text" id="Sender" name="Sender"><br>
+        <label for="Receiver">Receiver:</label><br>
+        <input type="text" id="Receiver" name="Receiver">
+        <label for="Amount">Amount:</label><br>
+        <input type="text" id="Amount" name="Amount">
+        <button type="submit">Submit</button>
+    </form> -->
+    <h1><%= msg %></h1>
+</body>
+</html>
