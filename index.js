@@ -9,7 +9,7 @@ app.set('view engine','ejs');
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(favicon(path.join('public', 'favicon.ico')));
+// app.use(favicon(path.join('public', 'favicon.ico')));
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
