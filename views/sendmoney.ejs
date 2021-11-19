@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico?v=1.1">
     <link  href="style.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Thunder bank</title>
 </head>
 <body>
     <%- include('nav') -%>
     <div class="login-box">
-        <h2>Send Money</h2>
+        <h2>SEND MONEY</h2>
         <form method="POST">
           <div class="user-box">
             <input type="text" id="Sender" name="Sender">
@@ -24,7 +25,8 @@
             <input type="text" id="Amount" name="Amount">
             <label>Amount</label>
           </div>
-          <button type="submit">Transfer</button>
+          <div class='button-div'><button type="submit">Transfer</button></div>
+          <h1 class="sendh1"><%= msg %></h1>
         </form>
       </div>
      
@@ -39,6 +41,7 @@
         <input type="text" id="Amount" name="Amount">
         <button type="submit">Submit</button>
     </form> -->
-    <h1><%= msg %></h1>
+    
+    
 </body>
 </html>

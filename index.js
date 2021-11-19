@@ -9,6 +9,7 @@ app.set('view engine','ejs');
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(favicon(path.join('public', 'favicon.ico')));
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
@@ -46,12 +47,16 @@ connection.connect();
 // })
 
 // app.get("/hehe",function (req,res){
-//     var x="insert into sayakbank values ('Suraj Hajra','suraj@gmail.com', 923456780 , 8876543210 , 1500000);"
+//     var x="delete from transac where Senders_acc=758758;"
 //     connection.query(x);
 // })
 
 app.get("/",function (req,res){
     res.render("index");
+})
+
+app.get("/aboutme",function (req,res){
+    res.render("aboutme");
 })
 
 app.get("/customers",function (req,res){
@@ -127,18 +132,20 @@ app.get("/viewbalance",function (req,res){
     res.render("viewbalance",{msg:""});
 })
 
+
+
 app.post("/viewbalance",function (req,res){
-    var {sec}=req.body;
+    let {sec}=req.body;
     sec=parseInt(sec);
-    var query1=`select Balance from sayakbank where Account_No=${sec};`
+    let query1=`select Balance from sayakbank where Account_No=${sec};`
     connection.query(query1,function (error,results,fields){
         if(!error)
         {
-            console.log(results[0].Balance);
             res.render("viewbalance",{msg:`Your Balance is ${results[0].Balance}`});
         }
         else{
-            res.render("viewbalance",{msg:`Please Check Your Account No. or Come back Later`});
+            console.log("Error Come back later");
+            res.render("viewbalance",{msg:"Please Check Your Account No. or Come back Later"});
         }
     }) 
 })
