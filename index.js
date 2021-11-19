@@ -47,7 +47,9 @@ connection.connect();
 // })
 
 // app.get("/hehe",function (req,res){
-//     var x="delete from transac where Senders_acc=758758;"
+//     var x=`insert into sayakbank values
+//         ('Suman Maity','suman@gmail.com', 129456789 , 6976543210 , 900000),
+//         ('Aniket Biswas','aniket@gmail.com', 128456788 , 7976543211 , 800000);`
 //     connection.query(x);
 // })
 
