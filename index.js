@@ -143,7 +143,7 @@ app.post("/viewbalance",function (req,res){
     }) 
 })
 
-var port=process.env.PORT || 3000;
+var port=process.env.PORT || '3000';
 
 app.listen(port,()=>{
     console.log("Server at port 3000")
