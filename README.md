@@ -1,7 +1,5 @@
 # Thunder-Bank
 
-# Features
-
 This is a Basic Banking System where users can -
 * View All Customers in the Bank.
 * Transfer Money from one customer to other.
