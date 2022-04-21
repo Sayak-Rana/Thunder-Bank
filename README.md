@@ -16,7 +16,6 @@ This is a Basic Banking System where users can -
 # Demo Link
 * YouTube Link - https://youtu.be/g3s_RpegAxg
 * Linkedin Post link - https://www.linkedin.com/posts/sayak-rana-125a48192_task1-gripnovember21-gripnovember2021-activity-6867735264404615168-92vG
-* Live Website - https://thunder-bank.herokuapp.com/ [Don't type account no which is not in the table]
 * (Please type account no. which is present in the database or the whole database may crash and the website may no longer work)
 
 # Limitations
